@@ -1,5 +1,10 @@
 {
   "files.associations": {
     "stdio.h": "c"
+  },
+  "c": {
+    "compilerPath": "/usr/bin/gcc",
+    "languageDefault": "c",
+    "terminal.integrated.shell.osx": "/bin/bash"
   }
 }

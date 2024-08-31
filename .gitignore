@@ -1,0 +1,7 @@
+*.exe
+# Ignore all files without extensions (unix executable files)
+*
+!*.*
+!*/
+!LICENSE*
+
