@@ -1,7 +1,14 @@
-*.exe
+
 # Ignore all files without extensions (unix executable files)
 *
 !*.*
 !*/
 !LICENSE*
-
+*.exe.dSYM
+.DS_Store
+*.dSYM/
+*.exe
+cmake-build-debug
+build
+*.xml
+.idea
