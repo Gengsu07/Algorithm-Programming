@@ -1,24 +1,3 @@
 {
-  "files.associations": {
-    "stdio.h": "c",
-    "stdlib.h": "c",
-    "conio.h": "c",
-    "string.h": "c"
-  },
-  "c": {
-    "compilerPath": "/usr/bin/gcc",
-    "languageDefault": "c",
-    "terminal.integrated.shell.osx": "/bin/bash"
-  },
-  "presentation-mode.configBackup": {
-    "editor.fontSize": "undefined",
-    "editor.matchBrackets": "undefined",
-    "editor.minimap.enabled": "undefined",
-    "editor.scrollbar.verticalScrollbarSize": "undefined",
-    "workbench.activityBar.visible": "undefined",
-    "workbench.statusBar.visible": "undefined",
-    "workbench.colorTheme": "undefined",
-    "workbench.colorCustomizations": "undefined",
-    "window.zoomLevel": "undefined"
-  }
+  "C_Cpp.errorSquiggles": "disabled"
 }
