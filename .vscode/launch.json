@@ -2,28 +2,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug C Program",
-      "type": "cppdbg",
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/your_program_name", // Replace with your program's name
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "build",
-      "miDebuggerPath": "/usr/bin/lldb", // Ensure this path is correct
-      "logging": {
-        "engineLogging": true
-      }
+      "cwd": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/TK2 W8 S21 R3",
+      "program": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/TK2 W8 S21 R3/build/Debug/outDebug"
     }
   ]
 }

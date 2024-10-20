@@ -5,7 +5,7 @@
 /* function declaration */
 void StrCopy(char *str1, char *str2);
 /* main() function */
-int main()
+int main(void)
 {
     char str[] = "Use malloc() to allocate memory.";
     char *ptr_str;

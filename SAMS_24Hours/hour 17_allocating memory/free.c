@@ -7,7 +7,7 @@ void DataMultiply(int max, int *ptr);
 void TablePrint(int max, int *ptr);
 
 /* main() function */
-int main()
+int main(void)
 {
     int *ptr_int, max;
     int termination;
@@ -20,7 +20,7 @@ int main()
         printf("Enter a single digit number: \n");
         scanf("%d", &max);
 
-        ptr_int = (int *)malloc(max * max * sizeof(int)); /* call malloc() */
+        ptr_int = malloc((size_t)max * (size_t)max * sizeof(int)); /* call malloc() */
         if (ptr_int != NULL)
         {
             DataMultiply(max, ptr_int);

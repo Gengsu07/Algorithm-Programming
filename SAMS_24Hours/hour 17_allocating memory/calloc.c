@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    float *ptr1, *ptr2;
+    size_t i, n;
+    int termination = 1;
+
+    n = 5;
+    ptr1 = calloc(n, sizeof(float));
+    ptr2 = malloc(n * sizeof(float));
+
+    if (ptr1 == NULL)
+        printf("calloc() failed.\n");
+    else if (ptr2 == NULL)
+        printf("malloc() failed.\n");
+    else
+    {
+        for (i = 0; i < n; i++)
+        {
+            printf("ptr1[%zu] = %5.2f, ptr2[%zu] = %5.2f\n", i, *(ptr1 + i), i, *(ptr2 + i));
+        }
+        free(ptr1);
+        free(ptr2);
+        termination = 0;
+    }
+
+    return termination;
+}
