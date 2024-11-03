@@ -9,8 +9,8 @@ void OneCharAtTime(FILE *fin, FILE *fout);
 int main(void)
 {
     FILE *fin, *fout;
-    char filein[] = "test.txt";
-    char fileout[] = "out.txt";
+    char filein[] = "file1.txt";
+    char fileout[] = "file2.txt";
     int status = SUCCESS;
 
     if ((fin = fopen(filein, "r")) == NULL)

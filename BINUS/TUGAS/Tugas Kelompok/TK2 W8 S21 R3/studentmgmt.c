@@ -16,10 +16,10 @@ typedef struct
 } Students;
 
 void clrscr(void);
-void addStudent(void);
-void displayStudent(void);
-void searchStudent(void);
-void deleteStudent(void);
+void addBook(void);
+void displayBook(void);
+void searchBook(void);
+void deleteBook(void);
 void setMsgNotif(const char *msg);
 size_t countRecords(FILE *db_session);
 int status = SUCCESS;
@@ -58,20 +58,20 @@ int main(void)
         {
         case 1:
             clrscr();
-            addStudent();
+            addBook();
             setMsgNotif("Data Berhasil Ditambahkan...");
             break;
         case 2:
             clrscr();
-            displayStudent();
+            displayBook();
             break;
         case 3:
             clrscr();
-            searchStudent();
+            searchBook();
             break;
         case 4:
             clrscr();
-            deleteStudent();
+            deleteBook();
             setMsgNotif("Data Berhasil Dihapus...");
             break;
         default:
@@ -80,7 +80,7 @@ int main(void)
     }
     return status;
 }
-void addStudent(void)
+void addBook(void)
 {
     Students *newStudent = NULL;
     char inputlagi;
@@ -131,7 +131,7 @@ void addStudent(void)
     }
 }
 
-void displayStudent(void)
+void displayBook(void)
 {
     Students *savedStudent = NULL;
 
@@ -175,7 +175,7 @@ void displayStudent(void)
         status = FAILED;
     }
 }
-void searchStudent(void)
+void searchBook(void)
 {
     char input_nomor_registrasi[12];
     char buffer[256];
@@ -226,7 +226,7 @@ void searchStudent(void)
         status = FAILED;
     }
 }
-void deleteStudent(void)
+void deleteBook(void)
 {
     char input_nomor_registrasi[11];
     char buffer[256];
