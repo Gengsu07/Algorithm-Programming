@@ -17,7 +17,7 @@ typedef struct
 
 void clrscr(void);
 void addBook(void);
-void displayBook(void);
+void displayStudent(void);
 void searchBook(void);
 void deleteBook(void);
 void setMsgNotif(const char *msg);
@@ -63,7 +63,7 @@ int main(void)
             break;
         case 2:
             clrscr();
-            displayBook();
+            displayStudent();
             break;
         case 3:
             clrscr();
@@ -131,7 +131,7 @@ void addBook(void)
     }
 }
 
-void displayBook(void)
+void displayStudent(void)
 {
     Students *savedStudent = NULL;
 

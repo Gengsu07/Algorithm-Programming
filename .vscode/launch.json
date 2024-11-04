@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/SAMS_24Hours/hour 21_read and write",
-      "program": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/SAMS_24Hours/hour 21_read and write/build/Debug/outDebug"
+      "cwd": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/PROYEK",
+      "program": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/PROYEK/build/Debug/outDebug"
     }
   ]
 }
