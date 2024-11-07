@@ -70,6 +70,8 @@ union {
 - dot operator digunakan untuk mengakses field atau variable yang ada di dalam union
 - -> digunakan untuk mengakses pointer dari union
 
+---
+
 ```c
 /* 20L01.c Referencing a union */
 #include <stdio.h>

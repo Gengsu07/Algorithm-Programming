@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/PROYEK",
-      "program": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas Kelompok/PROYEK/build/Debug/outDebug"
+      "cwd": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas_Personal/TP2_W4",
+      "program": "/Users/gengsudev/Library/CloudStorage/OneDrive-BinaNusantara/LMS/2024_SemesterGanjil_Periode 1/Algorithm and Programming/Algo&Programming/BINUS/TUGAS/Tugas_Personal/TP2_W4/build/Debug/outDebug"
     }
   ]
 }

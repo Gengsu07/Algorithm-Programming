@@ -49,6 +49,8 @@ struct automobile {
 
 ---
 
+---
+
 # Mendefinisikan Struct Variables
 
 > Setelah mendeklarasi struct, kita membuat variable dari struct yg sudah dibuat
@@ -348,6 +350,14 @@ void DataReceive(SC *ptr_s)
     scanf("%f", &(*ptr_s).cost);
 }
 ```
+
+---
+
+**ingat karena precedence maka &(\*ptr_s).year**
+pakai kurung untuk dereference baru dot
+
+**pakai -> untuk membuat sederhana**
+jadi cukup : &ptr_s ->.year
 
 ---
 
