@@ -22,9 +22,33 @@ paginate: true
 
 # Pointer arithmetic
 
-> :brain: Kita bisa memindah posisi pointer dengan menambah atau mengurang pointer tersebut.
+> :brain: Kita bisa memindah posisi pointer dengan
+>
+> - menambah pointer dengan integer
+> - mengurangi pointer dengan integer
+> - mengurangkan pointer dengan pointer lainnya dalam satu array
 
-## misal : ptr + 1, ptr - 2
+**The name of an array can be used as a pointer to the first element in the array.**
+
+misal : `a[1] = *(ptr + 1), a[2] = *(ptr + 2)`
+
+---
+
+## Adding Pointer
+
+![alt text](image-4.png)
+
+---
+
+## Subtracting Pointer
+
+![alt text](image-5.png)
+
+---
+
+## Subtracting Pointer to Pointer from same array
+
+![alt text](image-6.png)
 
 ---
 
@@ -39,6 +63,25 @@ contoh
 
 - `ptr_str + 1` (ptr_str char pointer)
   maka ukuranya `ptr_str+1*sizeof(char)`
+
+---
+
+# Using Pointer to Array Processing
+
+> :brain: Kita bisa menggunakan pointer untuk melakukan proses array
+
+```c
+#define N 10
+« • •
+int a [N], sum, *p;
+sum - 0;
+for (p = &a[0] ; p < &a[N] ; p++)
+  sum += *p;
+```
+
+---
+
+![alt text](image-7.png)
 
 ---
 
@@ -88,13 +131,133 @@ After the change, list[2] contains: -3
 
 ---
 
-# Pass Array ke Function
+```c
+#include <stdio.h>
+#define N 10
+int main(void)
+{
+int a [N] , *p;
 
-> :brain: Kita bisa mengirim array ke function sebagai parameter (call by value)
+printf ("Enter %d numbers: ", N);
+for (p = a; p < a + N; p++)
+  scanf("%d", p);
+
+printf("In reverse order:");
+for (p = a + N - 1; p >= a; p--)
+  printf(" %d", *p);
+printf("\n");
+return 0;
+}
+```
 
 ---
 
-## ![h:600](image.png)
+## Kombinasi \* dan ++
+
+```c
+int arr[] = {10, 20, 30};
+    int *p = arr; // p points to the first element of arr
+    int a = *p++; // Value of a is 10, p now points to arr[1]
+    printf("Value of a: %d, p points to: %d\n", a, *p);
+    int b = *(p++); // Value of b is 20, p now points to arr[2]
+    printf("Value of b: %d, p points to: %d\n", b, *p);
+```
+
+- \*p++:
+  Dereference p first (get the value 10), then increment p to point to the next element (20).
+- *(p++):
+  Similar to *p++, dereference first (get 20), then increment p to point to the next element (30).
+
+---
+
+## (\*p)++:
+
+```c
+    // 3. (*p)++
+    int c = (*p)++; // Value of c is 30, *p becomes 31
+    printf("Value of c: %d, *p is now: %d\n", c, *p);
+
+```
+
+Dereference p (get 30), return the original value, then increment the value at that location (now arr[2] becomes 31).
+
+---
+
+## \*++p:
+
+```c
+// 4. *++p
+    int d = *++p; // p now points to arr[3] (out of bounds), this is undefined behavior
+    // printf("Value of d: %d\n", d); // Uncommenting this may cause undefined behavior
+```
+
+Increment p first (now pointing beyond the array), accessing this value is undefined behavior.
+
+---
+
+## ++(\*p):
+
+```c
+   // Instead, let's reset p for safe access
+    p = arr; // Reset p to the start
+    // 5. ++*p
+    int e = ++(*p); // *p becomes 11, value of e is 11
+    printf("Value of e: %d, *p is now: %d\n", e, *p);
+```
+
+Increment the value pointed to by p (which is 10), making it 11, and the value of e becomes 11.
+
+---
+
+# Pass Array ke Function
+
+> :brain: Kita bisa mengirim arrayname ke function sebagai parameter (call by reference) karena arrayname merupakan memory address elemen pertama dari array.
+> If p is a pointer to the first element of an array, you can access elements using p[i].
+> `int list[] atau int *list`
+
+---
+
+###### Pakai array di fungsi parameter untuk merefer ke array yg di passing `int list[]`
+
+```c
+#include <stdio.h>
+
+int AddThree(int list[]) {
+    int i;
+    int result = 0;
+    for (i = 0; i < 3; i++) {
+        list[i] *= 2;  // Modify the original array
+        result += list[i]; // tidak perlu dereference pointer
+    }
+    return result;
+}
+
+
+```
+
+---
+
+###### pakai pointer di fungsi parameter untuk merefer ke array yg di passing `int *list`
+
+```c
+void processArray(int *p) {
+    for (int i = 0; i < 3; i++) {
+        // Access value directly
+        printf("%d ", p[i]); // No need to dereference
+    }
+}
+```
+
+```c
+int sumArray(int *p) {
+    int sum = 0;
+    for (int i = 0; i < 3; i++) {
+        // Dereferencing the pointer to get the value
+        sum += *(p + i); // p[i] is equivalent, but this shows dereferencing
+    }
+    return sum;
+}
+```
 
 ---
 
