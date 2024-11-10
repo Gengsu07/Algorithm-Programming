@@ -135,7 +135,7 @@ union u {
 
 ---
 
-## ![alt text](image.png)
+## ![h:300](image.png)
 
 # Size of Unions
 
@@ -181,7 +181,9 @@ void UnionInitialize(union u *val)
 
 ---
 
-## `The statements in lines 19 and 20 print out the two bytes of the int variable num. Line 19 displays the low byte of num, obtained by evaluating Understanding Unions 343 the x & 0x00FF expression. In line 20, the high byte of num is obtained by shifting the x variable to the right by 8 bits, that is, by using the shift-right operator in the x >> 8 expression`
+`The statements in lines 19 and 20 print out the two bytes of the int variable num. Line 19 displays the low byte of num, obtained by evaluating Understanding Unions 343 the x & 0x00FF expression. In line 20, the high byte of num is obtained by shifting the x variable to the right by 8 bits, that is, by using the shift-right operator in the x >> 8 expression`
+
+---
 
 # Struct Bit field
 

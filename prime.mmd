@@ -1,0 +1,20 @@
+flowchart TB 
+    A([Start]) --> B[baca bilangan]
+    B --> C{bilangan <= 1?}
+    C --ya--> D[Bilangan bukan prima]
+    
+    subgraph loop
+        direction LR
+        E[i=2] -->O{"i < bilangan?"} --ya--> F{bilangan % i ==0 ?}
+        
+        F --ya--> G[Bilangan bukan prima] --> I[break]
+        F --tidak--> H[i++] ---> O
+        end
+
+    I --> J{i == bilangan?}
+    J --ya--> K[Bilangan prima]
+    C --tidak-->E
+
+    
+    D --> Z([End])
+    K --> Z

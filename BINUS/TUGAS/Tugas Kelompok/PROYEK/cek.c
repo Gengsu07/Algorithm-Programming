@@ -2,49 +2,32 @@
 
 int main(void)
 {
-    int navmenu = 0;
-
-    while (navmenu != 6)
+    struct computer
     {
-        printf("\n\n\t\t\t========== BOOK MONITORING SYSTEM =========");
+        float cost;
+        int year;
+        int cpu_speed;
+        char cpu_type[8];
+    } model;
 
-        printf("\n\n\t\t\t--------- Pilih Menu Dibawah Ini --------");
-        printf("\n\t\t\t1. Tambah Data Buku");
-        printf("\n\t\t\t2. Tampilkan History Penjualan");
-        printf("\n\t\t\t3. Tampilkan Data Buku");
-        printf("\n\t\t\t4. Delete History Penjualan");
-        printf("\n\t\t\t5. Delete Buku");
-        printf("\n\t\t\t6. Keluar\n");
-        printf("\n\t\t\t-------------------------------------------------------");
+    printf("The type of the CPU inside your computer?\n");
+    fgets(model.cpu_type, sizeof(model.cpu_type), stdin);
 
-        printf("\n\t\t\t Masukkan Pilihan Menu : ");
-        scanf("%d", &navmenu);
-        getchar();
+    printf("The speed (MHz) of the CPU?\n");
+    scanf("%d", &model.cpu_speed);
 
-        switch (navmenu)
-        {
-        case 1:
+    printf("The year your computer was made?\n");
+    scanf("%d", &model.year);
 
-            printf("1");
+    printf("How much you paid for the computer?\n");
+    scanf("%f", &model.cost);
 
-            break;
-        case 2:
-            // clrscr();
-            printf("asdfas");
-            break;
-        case 3:
+    printf("Here are what you entered:\n");
+    printf("Year: %d\n", model.year);
+    printf("Cost: $%6.2f\n", model.cost);
+    printf("CPU type: %s", model.cpu_type); // fgets includes the newline character
+    printf("CPU speed: %d MHz\n", model.cpu_speed);
 
-            // searchBook();
-            break;
-        case 4:
-
-            // deleteBook();
-            break;
-
-        default:
-            printf("de");
-            break;
-        }
-    }
     return 0;
 }
+

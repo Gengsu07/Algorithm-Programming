@@ -12,7 +12,7 @@
 
 ## Program Menu
 
-![alt text](./media/image.png)
+![alt text](./assets/image.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -91,7 +91,7 @@ int main(void)
 
 ### Add Book
 
-![alt text](./media/image-1.png)
+![alt text](./assets/image-1.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -152,7 +152,7 @@ void addBook(void)
 
 ## View Sales History
 
-![alt text](./media/image-2.png)
+![alt text](./assets/image-2.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -222,7 +222,7 @@ void salesHistory(void)
 
 ## View Book
 
-![alt text](./media/image-3.png)
+![alt text](./assets/image-3.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -287,7 +287,7 @@ void viewBook(void)
 
 ## Delete Sales History
 
-![alt text](./media/image-4.png)
+![alt text](./assets/image-4.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -394,7 +394,7 @@ void deleteSalesHistory(void)
 
 ## Delete Book
 
-![alt text](./media/image-6.png)
+![alt text](./assets/image-6.png)
 
 <details>
 <summary>Click to See to Code</summary>
@@ -499,7 +499,7 @@ void deleteBook(void)
 
 ## Create Transaction
 
-![alt text](./media/image-5.png)
+![alt text](./assets/image-5.png)
 
 <details>
 <summary>Click to See to Code</summary>
